@@ -1,4 +1,4 @@
-package com.example.rxjava.pojo;
+package com.example.rxjava.model;
 
 public class PostModel {
     private int userId;

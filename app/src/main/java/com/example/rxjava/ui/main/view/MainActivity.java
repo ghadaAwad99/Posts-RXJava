@@ -1,17 +1,14 @@
-package com.example.rxjava.ui.main;
+package com.example.rxjava.ui.main.view;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
 import com.example.rxjava.R;
-import com.example.rxjava.pojo.PostModel;
-
-import java.util.List;
+import com.example.rxjava.ui.main.viewModel.PostViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,11 +31,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void fetchPosts(){
-        postViewModel.postsLiveData.observe(this, new Observer<List<PostModel>>() {
-            @Override
-            public void onChanged(List<PostModel> postModels) {
-                adapter.setData(postModels);
-            }
-        });
+        postViewModel.postsLiveData.observe(this, postModelList -> adapter.setData(postModelList));
     }
 }

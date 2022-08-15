@@ -1,4 +1,4 @@
-package com.example.rxjava.ui.main;
+package com.example.rxjava.ui.main.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.rxjava.R;
-import com.example.rxjava.pojo.PostModel;
+import com.example.rxjava.model.PostModel;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,10 @@
-package com.example.rxjava.Network;
+package com.example.rxjava.network;
 
-import com.example.rxjava.pojo.PostModel;
+import com.example.rxjava.model.PostModel;
 
 import java.util.List;
 
 import io.reactivex.Observable;
-import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
