@@ -1,10 +1,21 @@
 package com.example.rxjava.model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "posts_table")
 public class PostModel {
     private int userId;
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String title;
     private String body;
+
+    public PostModel(int userId,  String title, String body) {
+        this.userId = userId;
+        this.title = title;
+        this.body = body;
+    }
 
     public int getUserId() {
         return userId;

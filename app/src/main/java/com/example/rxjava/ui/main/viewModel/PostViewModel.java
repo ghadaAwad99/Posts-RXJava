@@ -25,6 +25,7 @@ public class PostViewModel extends ViewModel {
     private MutableLiveData<List<PostModel>> postsMutableLiveData = new MutableLiveData<>();
     public LiveData<List<PostModel>> postsLiveData = postsMutableLiveData;
 
+
     public void getPosts() {
         Observable<List<PostModel>> postsObservable = PostClient.getPostClientInstance().getPosts()
                 //up stream to IO thread [Background]
